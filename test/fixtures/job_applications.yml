@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  time: 2019-04-22 13:05:14
+  candidate: one
+
+two:
+  time: 2019-04-22 13:05:14
+  candidate: two

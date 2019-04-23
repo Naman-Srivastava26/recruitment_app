@@ -1,0 +1,45 @@
+AllCops:
+  Exclude:
+    - "db/schema.rb"
+    - "bin/*"
+
+Rails/UnknownEnv:
+  Environments:
+    - production
+    - stage
+    - development
+    - test
+
+MethodLength:
+  Exclude:
+    - "db/migrate/*"
+
+AbcSize:
+  Exclude:
+    - "db/migrate/*"
+
+Metrics/BlockLength:
+  Exclude:
+    - "config/**/*"
+    - "spec/**/*"
+
+Rails:
+  Enabled: true
+
+Documentation:
+  Enabled: false
+
+Metrics/LineLength:
+  Max: 120
+
+Metrics/AbcSize:
+  Max: 20
+
+Metrics/MethodLength:
+  Max: 15
+
+Metrics/ClassLength:
+  Max: 200
+
+Style/AsciiComments:
+  Enabled: false
