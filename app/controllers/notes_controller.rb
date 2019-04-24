@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 class NotesController < ApplicationController
-  before_action :set_note, only: [:show, :edit, :update, :destroy]
+  before_action :set_note, only: %i[show edit update destroy]
 
   # GET /notes
   # GET /notes.json
@@ -9,8 +11,7 @@ class NotesController < ApplicationController
 
   # GET /notes/1
   # GET /notes/1.json
-  def show
-  end
+  def show; end
 
   # GET /notes/new
   def new
@@ -18,8 +19,7 @@ class NotesController < ApplicationController
   end
 
   # GET /notes/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /notes
   # POST /notes.json
@@ -62,13 +62,14 @@ class NotesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_note
-      @note = Note.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def note_params
-      params.require(:note).permit(:content, :candidate_id)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_note
+    @note = Note.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def note_params
+    params.require(:note).permit(:content, :candidate_id)
+  end
 end
