@@ -9,16 +9,16 @@ Things you may want to cover:
 
 * Ruby 2.6.1
 
-* Configuration
+Initalize database:
 
-* Database creation
+* rails db:migrate
 
-* Database initialization
+Run rake for import csv files:
 
-* How to run the test suite
+* rails file:import_csv
 
-* Services (job queues, cache servers, search engines, etc.)
+Finnaly run rails server
 
-* Deployment instructions
+* rails server
 
-* ...
+You can find app now by pointing your browser to http://localhost:3000.
