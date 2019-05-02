@@ -9,7 +9,3 @@ Rails.application.load_tasks
 
 Rails.application.load_tasks
 Rake::Task['default'].clear
-
-task :default do
-  Rake::Task['file:import_csv'].invoke
-end
