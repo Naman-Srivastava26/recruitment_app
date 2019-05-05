@@ -16,9 +16,6 @@
       <tr>
         <td><%= job_application.time %></td>
         <td><%= job_application.candidate_id %></td>
-        <td><%= link_to 'Show', job_application %></td>
-        <td><%= link_to 'Edit', edit_job_application_path(job_application) %></td>
-        <td><%= link_to 'Destroy', job_application, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -26,4 +23,3 @@
 
 <br>
 
-<%= link_to 'New Job Application', new_job_application_path %>

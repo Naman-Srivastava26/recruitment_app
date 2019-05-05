@@ -3,6 +3,7 @@
 namespace :file do
   task import_csv: :environment do
     require 'csv'
+    require 'rails/all'
 
     ActiveRecord::Base.transaction do
       csv_text = File.read(Rails.root.join('lib', 'seeds', 'notes.csv'))
