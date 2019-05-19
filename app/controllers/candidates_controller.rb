@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 class CandidatesController < ApplicationController
-  before_action :set_candidate, only: [:show, :edit, :update, :destroy]
+  before_action :set_candidate, only: %i[show edit update destroy]
 
   # GET /candidates
   # GET /candidates.json
@@ -9,8 +11,7 @@ class CandidatesController < ApplicationController
 
   # GET /candidates/1
   # GET /candidates/1.json
-  def show
-  end
+  def show; end
 
   # GET /candidates/new
   def new
@@ -18,8 +19,7 @@ class CandidatesController < ApplicationController
   end
 
   # GET /candidates/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /candidates
   # POST /candidates.json
@@ -62,13 +62,14 @@ class CandidatesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_candidate
-      @candidate = Candidate.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def candidate_params
-      params.require(:candidate).permit(:name, :email, :phone)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_candidate
+    @candidate = Candidate.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def candidate_params
+    params.require(:candidate).permit(:name, :email, :phone)
+  end
 end
